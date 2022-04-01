@@ -6,8 +6,9 @@
   "scripts": {
     "dev:server": "nodemon ./src/server.js",
     "dev:autoload:server": "nodemon ./src/index.js",
-    "build:linux": "npx pkg ./src/server.js -c package.json -t node14-linux-x64 --no-bytecode -o dist/linux-nodejs",
-    "build:mac": "npx pkg ./src/server.js -c package.json -t node14-macos-x64 --no-bytecode -o dist/mac-nodejs"
+    "build:linux": "npx pkg ./src/server.js -c package.json -t node16-linux-x64 --no-bytecode -o dist/linux-nodejs",
+    "build:mac": "npx pkg ./src/server.js -c package.json -t node14-macos-x64 --no-bytecode -o dist/mac-nodejs",
+    "build:win": "npx pkg ./src/server.js -c package.json -t node16-win-x64 --no-bytecode -o dist/win-nodejs"
   },
   "keywords": [],
   "author": "",
@@ -26,8 +27,9 @@
   },
   "pkg": {
     "targets": [
-      "node14-linux-arm64",
-      "node14-macos-x64"
+      "node16-linux-arm64",
+      "node14-macos-x64",
+      "node16-win-x64"
     ],
     "outputPath": "dist"
   }
