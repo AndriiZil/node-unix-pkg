@@ -1,5 +1,5 @@
 {
-  "name": "linux-pkg",
+  "name": "nodejs-pkg",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,13 +17,13 @@
     "express": "4.17.3"
   },
   "devDependencies": {
-    "electron-builder": "22.14.13",
     "nodemon": "2.0.15",
     "pkg": "5.5.2"
   },
   "optionalDependencies": {
     "node-mac": "1.0.1",
-    "node-linux": "0.1.12"
+    "node-linux": "0.1.12",
+    "electron-builder": "22.14.13"
   },
   "pkg": {
     "targets": [
