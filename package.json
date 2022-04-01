@@ -13,13 +13,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "4.17.3",
-    "node-mac": "1.0.1"
+    "express": "4.17.3"
   },
   "devDependencies": {
     "electron-builder": "22.14.13",
     "nodemon": "2.0.15",
     "pkg": "5.5.2"
+  },
+  "optionalDependencies": {
+    "node-mac": "1.0.1",
+    "node-linux": "0.1.12"
   },
   "pkg": {
     "targets": [

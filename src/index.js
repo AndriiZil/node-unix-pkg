@@ -8,15 +8,15 @@ app.get('/linux', (req, res) => {
   const svc = new Service({
     name:'Hello World',
     description: 'The nodejs.org example web server.',
-    script: '/server.js'
+    script: join(__dirname, 'server.js')
   });
 
   svc.on('install', () => {
     svc.start();
   });
 
-  svc.install();
-  // svc.uninstall();
+  // svc.install();
+  svc.uninstall();
 
   return res.send({ message: 'success' });
 });
@@ -34,8 +34,8 @@ app.get('/mac', (req, res) => {
     svc.start();
   });
 
-  svc.install();
-  // svc.uninstall();
+  // svc.install();
+  svc.uninstall();
 
   return res.send({ message: 'success' });
 });
