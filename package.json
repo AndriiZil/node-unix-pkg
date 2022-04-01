@@ -4,26 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./src/server.js",
-    "build:linux": "npx pkg ./src/server.js -c package.json -t node14-linux-x64 --no-bytecode",
-    "build:nexe": "nexe ./src/server.js --build"
+    "dev:server": "nodemon ./src/server.js",
+    "dev:autoload:server": "nodemon ./src/index.js",
+    "build:linux": "npx pkg ./src/server.js -c package.json -t node14-linux-x64 --no-bytecode -o dist/linux-nodejs",
+    "build:mac": "npx pkg ./src/server.js -c package.json -t node14-macos-x64 --no-bytecode -o dist/mac-nodejs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.3",
-    "node-linux": "^0.1.12"
+    "express": "4.17.3",
+    "node-mac": "1.0.1"
   },
   "devDependencies": {
-    "electron-builder": "^22.14.13",
-    "nexe": "^4.0.0-beta.19",
-    "nodemon": "^2.0.15",
-    "pkg": "^5.5.2"
+    "electron-builder": "22.14.13",
+    "nodemon": "2.0.15",
+    "pkg": "5.5.2"
   },
   "pkg": {
     "targets": [
-      "node14-linux-arm64"
+      "node14-linux-arm64",
+      "node14-macos-x64"
     ],
     "outputPath": "dist"
   }
